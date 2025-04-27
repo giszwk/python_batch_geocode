@@ -42,11 +42,11 @@ API_KEY = None
 # Backoff time sets how many minutes to wait between google pings when your API limit is hit
 BACKOFF_TIME = 30
 # Set your output file name here.
-output_filename = 'data/output-2015.csv'
+output_filename = '/data24t/weikezhao/fifth_limian/python_batch_geocode/data/output.csv'
 # Set your input file here
-input_filename = "data/PPR-2015.csv"
+input_filename = "/data24t/weikezhao/fifth_limian/python_batch_geocode/data/city_list_50.csv"
 # Specify the column name in your input data that contains addresses here
-address_column_name = "Address"
+address_column_name = "NAME"
 # Return Full Google Results? If True, full JSON results from Google are included in output
 RETURN_FULL_RESULTS = False
 
@@ -65,7 +65,7 @@ addresses = data[address_column_name].tolist()
 # **** DEMO DATA / IRELAND SPECIFIC! ****
 # We know that these addresses are in Ireland, and there's a column for county, so add this for accuracy. 
 # (remove this line / alter for your own dataset)
-addresses = (data[address_column_name] + ',' + data['County'] + ',Ireland').tolist()
+addresses = (data[address_column_name] + ',USA').tolist()
 
 
 #------------------	FUNCTION DEFINITIONS ------------------------
